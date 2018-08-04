@@ -1,0 +1,35 @@
+body {
+  background-color: #1C7430; /* Основной цвет фона - зеленый */
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.non-visible {
+  display: none; /* Для неактивных экранов */
+}
+
+.start-img {
+  margin-top: 20vh;
+}
+
+.main-header {
+  font-size: 28px;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: default;
+  opacity: 0.85;
+  margin-top: 20px;
+  letter-spacing: 0.2px;
+}
+
+.start-button {
+  font: 700 16px 'Open Sans';
+  color: #1C7430;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  opacity: 0.85;
+  margin-top: 10px;
+}
