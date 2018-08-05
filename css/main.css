@@ -3,6 +3,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   text-align: center;
+  margin: 0;
 }
 
 .non-visible {
@@ -35,6 +36,40 @@ body {
 }
 
 .main-screen {
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 15%;
+  padding-right: 15%;
+  height: 100vh;
+}
+
+.main-screen__nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  height: 5%;
+  align-items: flex-end;
+}
+
+.nav__start-again {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font: 400 14px 'Open Sans';
+  color: #fff;
+}
+
+.nav__points {
+  color: #fff;
+  font-size: 20px;
+}
+
+.main-screen__cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 90%;
+}
+
+.cards__item {
+  width: 14.3%;
+  height: 31%;
 }

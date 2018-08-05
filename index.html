@@ -8,13 +8,19 @@
 </head>
 <body>
   <!-- Стартовый экран -->
-  <div class="start-screen non-visible">
+  <div class="start-screen">
     <img class="start-img" src="img/StartGame.png" width="501" height="257">
     <h1 class="main-header">Memory game</h1>
-    <button class="start-button" type="button">Начать игру</button>
+    <button class="start-button">Начать игру</button>
   </div>
   <!-- Главный экран -->
-  <div class="main-screen">
+  <div class="main-screen non-visible">
+    <div class="main-screen__nav">
+      <button class="nav__item nav__start-again">Начать заново</button>
+      <span class="nav__item nav__points">Очки:  0</span>
+    </div>
+    <div class="main-screen__cards">
+    </div>
   </div>
   <!-- Последний экран -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
