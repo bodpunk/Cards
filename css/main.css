@@ -10,11 +10,13 @@ body {
   display: none; /* Для неактивных экранов */
 }
 
-.start-img {
+.start-img,
+.end-img {
   margin-top: 20vh;
 }
 
-.main-header {
+.main-header,
+.hooray {
   font-size: 28px;
   color: #fff;
   text-transform: uppercase;
@@ -24,7 +26,13 @@ body {
   letter-spacing: 0.2px;
 }
 
-.start-button {
+.hooray {
+  font-size: 24px;
+  text-transform: none;
+}
+
+.start-button,
+.again-button {
   font: 700 16px 'Open Sans';
   color: #1C7430;
   cursor: pointer;
@@ -53,11 +61,12 @@ body {
   cursor: pointer;
   background: none;
   border: none;
-  font: 400 14px 'Open Sans';
+  font: 400 16px 'Open Sans';
   color: #fff;
 }
 
-.nav__points {
+.nav__points--word,
+.nav__points--number {
   color: #fff;
   font-size: 20px;
 }
@@ -69,7 +78,55 @@ body {
   height: 90%;
 }
 
-.cards__item {
+.cards__flip-container.selected .flipper {
+transform: rotateY(180deg);
+}
+
+.cards__flip-container.selected img,
+.cards__flip-container.selected--done img {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.cards__flip-container {
   width: 14.3%;
   height: 31%;
+  cursor: pointer;
+}
+
+.cards__flip-container:hover img {
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.cards__item {
+  width: 100%;
+  height: 100%;
+}
+
+div:not(.selected--done) .flipper {
+ transition: 0.4s;
+ transform-style: preserve-3d;
+ position: relative;
+ height: 100%;
+}
+
+.cards__item--front, .cards__item--back {
+ backface-visibility: hidden;
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+.cards__item--back {
+ z-index: 2;
+}
+
+.cards__item--front {
+ transform: rotateY(180deg);
+}
+
+.selected--done .cards__item--front {
+  backface-visibility: visible;
+  transform: none;
 }
